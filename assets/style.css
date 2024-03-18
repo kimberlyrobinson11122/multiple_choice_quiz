@@ -1,0 +1,58 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.choice-button {
+    font-size: 1em;
+    text-align: left;
+}
+
+
+button:hover {
+    color: rgb(128, 5, 5);
+    cursor: pointer;
+}
+
+
+.project_cards {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.medium_print_on_page {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+.large_print_on_page {
+    text-align: center;
+}
+
+
+h1 {
+    font-weight: bold;
+    background-color: #ab94b6;
+    color: #fff;
+    padding: .5em;
+    text-align: center;
+}
+
+
+#timer {
+    font-size: 1.5em
+}
+
+
+.content {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
