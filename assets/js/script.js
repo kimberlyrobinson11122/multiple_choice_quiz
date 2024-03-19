@@ -12,9 +12,10 @@
 var seconds = 200;
 var timer;
 var questionIndex=0; 
-var quizArea=document.querySelector(".quiz_area")
+var quizArea=document.querySelector(".quiz_area");
 //var userAnswer;
 var highScore = 0;
+var playerInitials = "";
 
 var questionsArray = [
   {
@@ -166,6 +167,15 @@ var questionsArray = [
 function displayNextQuestion() {
     if (questionIndex == questionsArray.length - 1) {
         clearInterval(timer)
+        //var savedScores = localstorage.getItem("Scores") - will have json parsed (wrapping in parat and parse)
+        //if !null then scores = []
+        //clear div, add HTML
+        //input for initials (form-submit event)
+        //event listener to the form
+        //when the user submits it takes the text content from that input (id) 
+        //save to local.storage to object
+        //local.storage.setitem(json stringify({initals: variable, score: variable that represents the current score}))
+        console.log(highScore)
         return
     } else {
         var questionHeader = document.createElement("h2")
@@ -176,7 +186,7 @@ function displayNextQuestion() {
         for (var i = 0; i < choices.length; i++) {
               var button = document.createElement("button")
               button.textContent = choices[i]
-              button.classList.add("choice-button")
+              button.classList.add("choice-button", innerWidth, 25)
               quizArea.appendChild(button)
 
         }
@@ -240,24 +250,30 @@ function start_timer() {
         //milliseconds
 }
 
+function userEntersInitials() {
+  //add initials
+  var inputInitials = document.getElementById("inputInitials").value;
+  if (inputInitials !== "") {
+        winnerInitials = inputInitials.toUpperCase();
+        document.getElementById("initialsDisplayed").textContent = "Initials " + winnerInitials;
+        document.getElementById("initialsContainer").style.display = "none";
+        document.getElementById("highScoreBox").style.display = "block";
+  }
+}
+
+function updateViewHighScore() {
+    //view high score
+    document.getElementById("scoreDisplayed").textContent = "High Score: " + highScore
+}
+
 var view_high_scores = document.getElementById("view_high_scores")
 view_high_scores.addEventListener("click", function(event) {
-  event.preventDefault();
-  //click will display high score
-  alert("High Score: " + highScore)
+    //click will display high score
+    event.preventDefault();
+    document.querySelector(".quiz_area").style.display = "none"
+    document.getElementById("highScoreBox").style.display = "block"
+    updateViewHighScore()
+        
 });
 
-
-
-
-// Step 1: Creating Questions and Answers (DONE)
-// 1 - Which functions for adding or removing from an array, are correct below:
-// a - pop removes from beginning, unshift adds to the beginning, shift add to the end
-// b - pop removes from end, shift add to the end, unshift adds to the beginning
-// c - push adds to end, pop removes from end, shift removes from beginning
-// d - unshift adds to the beginning, pop removes from beginning, shift removes from end
-
-// Step 2: Displaying the Questions and Options
-// Step 3: Checking the Answer(s)
-// Step 4: Keeping Score each time
-// Step 5: Moving onto the Next Question
+document.getElementById("addInitials").addEventListener("click", userEntersInitials)

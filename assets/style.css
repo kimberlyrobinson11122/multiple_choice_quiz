@@ -29,6 +29,7 @@ button:hover {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    text-align: center;
 }
 
 
@@ -39,20 +40,28 @@ button:hover {
 
 h1 {
     font-weight: bold;
-    background-color: #ab94b6;
+    background-color: #393637e8;
     color: #fff;
     padding: .5em;
     text-align: center;
 }
 
 
-#timer {
-    font-size: 1.5em
+.timer {
+    font-size: 1.5em;
+    text-align: center;
 }
 
 
 .content {
     margin: 0 auto;
     width: 600px;
+}
+
+.quiz_area {
+    text-align: center;
+}
+
+.highScoreBox {
     text-align: center;
 }

@@ -18,7 +18,7 @@
     
 
     <main class="content">
-        <h1 class="large_print_on_page">
+        <h1 class="large_print_on_page text-center">
             Coding Quiz
         </h1>
        
@@ -28,12 +28,15 @@
             <p>
 
             <h2 id="main_quiz_body" class="medium_print_on_page">
-            Ready to tackle some code-related questions? Remember, each wrong answer subtracts ten seconds to your time! Stay lively!
+            Ready to tackle some code-related questions? 
+            <p>Answer carefully, each wrong answer subtracts ten seconds to your time!</p>
+            <p>Stay lively!</p>
             </h2>
 
         </p>
-        <image src="./assets/images/Question image.jpg"></image>
-
+            <div style="text-align: center">
+            <image src="./assets/images/Question image.jpg"></image>
+            </div>
         <p>
             <button id="startQuizButton">
             Start Quiz
@@ -47,7 +50,14 @@
 
     </main>
 
-
+    <div id="highScoreBox" style="display: none;">
+        <div id="initialsContainer">
+          <label for="inputInitials">Enter your initials:</label>
+          <input type="text" id="inputInitials">
+          <button id="addInitials">Submit</button>
+        </div>
+        <div id="scoreDisplayed"></div>
+    </div>
 
     <script>
         document.body.style.backgroundAttachment = "fixed";
