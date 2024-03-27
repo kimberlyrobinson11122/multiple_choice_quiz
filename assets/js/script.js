@@ -2,12 +2,13 @@ var seconds = 200;
 var timer;
 var questionIndex=0; 
 var quizArea=document.querySelector(".quiz_area");
-var grading=document.querySelector(".grading")
+var grading=document.querySelector(".grading");
 
 //var userAnswer;
 var highScore = 0;
 var playerInitials = "";
 
+//var question array
 var questionsArray = [
   {
     //question 1
@@ -58,10 +59,10 @@ var questionsArray = [
   [
     "A - virtual places within an operating system where network connections start and end",
     "B - on a computer it is a place where you can attach another piece of equipment",
-    "C - represents an area in computer graphics that is currently be viewwed",
+    "C - represents an area in computer graphics that is currently be viewed",
     "D - is a query of one or more tables that provides another way of presenting the information",
   ], 
-  answer:"C - represents an area in computer graphics that is currently be viewwed"
+  answer:"C - represents an area in computer graphics that is currently be viewed"
   },
 
 
@@ -147,27 +148,29 @@ var questionsArray = [
   ], 
   answer:"B - an array in Javascript is a dynamic list of things (objects, functions, anything, etc.)"
   },
-  
-{
 
-//score
-
-}
+  {
+    //score
+  }
 ];
 
+//next question function
 function displayNextQuestion() {
     if (questionIndex == questionsArray.length - 1) {
         clearInterval(timer)
-        quizArea.classList.add("hidden")
-        document.querySelector(".timer").classList.add("hidden")
-        document.querySelector("#highScoresList").classList.remove("hidden")
-        document.querySelector("#scoreDisplayed").innerHTML = `Good job! <br/>You are all finished! <br/> Your final score is ${highScore}!`
+        quizArea.classList.add("hidden");
+        document.querySelector(".timer").classList.add("hidden");
+        document.querySelector("#highScoresList").classList.remove("hidden");
+        document.querySelector("#scoreDisplayed").innerHTML = `Good job! <br/>You are all finished! <br/> Your final score is ${highScore}!`;
+        //item added
+        document.querySelector("#scoreDisplayed").add("hidden")
 
         console.log(highScore);
 
         updateViewHighScore();
 
         return;
+
     } else {
         var questionHeader = document.createElement("h2")
         questionHeader.textContent=questionsArray[questionIndex].question
@@ -175,17 +178,17 @@ function displayNextQuestion() {
 
         var choices = questionsArray[questionIndex].choices
         for (var i = 0; i < choices.length; i++) {
-              var button = document.createElement("button")
-              button.textContent = choices[i]
-              button.classList.add("choice-button")
-              quizArea.appendChild(button)
+              var button = document.createElement("button");
+              button.textContent = choices[i];
+              button.classList.add("choice-button");
+              quizArea.appendChild(button);
 
         }
       }
     }
 
-var start_btn = document.getElementById("startQuizButton")
-console.log(start_btn)
+var start_btn = document.getElementById("startQuizButton");
+console.log(start_btn);
 
 start_btn.addEventListener("click", function(){
         //rid of the stuff on the screen
@@ -199,6 +202,7 @@ start_btn.addEventListener("click", function(){
        
 })
 
+//quiz choice event listenter
 quizArea.addEventListener("click", function(e){
   if (e.target.matches(".choice-button")) {
       var selectedAnswer = e.target.textContent
@@ -233,7 +237,7 @@ quizArea.addEventListener("click", function(e){
   }
 });
 
-
+//start timer function
 function start_timer() {
         timer = setInterval(function() {
                 seconds --
@@ -242,17 +246,18 @@ function start_timer() {
                         clearInterval(timer)
                         //clearing interval
                         //execute in game function
-                }
-        }, 1000);
-        //milliseconds
-}
+                        }
+                }, 1000); //milliseconds  
+};
 
 function userEntersInitials() {
+
   //add initials
   var inputInitials = document.getElementById("inputInitials").value;
   inputInitials = inputInitials.toUpperCase(); //uppercase
   console.log(inputInitials);
 
+  //call uppercase function
   convertInitialsToUpperCase();
 
   var savedScores = JSON.parse(localStorage.getItem("Scores")) || []; // json parsed
@@ -269,9 +274,10 @@ function userEntersInitials() {
 
         //hide initials input and submit button
         document.getElementById("initialsContainer").classList.add("hidden");
-        document.getElementById("addInitials").classList.add("hidden");
-}
+        document.getElementById("addInitials").classList.add("hidden");       
+};
 
+//convert initials to uppercase function
 function convertInitialsToUpperCase() {
   var savedScores = JSON.parse(localStorage.getItem("Scores")) || [];
 
@@ -280,7 +286,7 @@ function convertInitialsToUpperCase() {
   });
 
   localStorage.setItem("Scores", JSON.stringify(savedScores));
-}
+  }
 
 function updateViewHighScore() {
 
@@ -305,10 +311,11 @@ function updateViewHighScore() {
     document.getElementById("players").appendChild(listItem);
 
     });
-}
+};
 
-var view_high_scores = document.querySelector("#view_high_scores a")
+var view_high_scores = document.querySelector("#view_high_scores a");
 
+//view high scores event listener
 view_high_scores.addEventListener("click", function(event) {
   
     //click will display high score

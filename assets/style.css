@@ -1,6 +1,4 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+* {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 
 
 .choice-button {
@@ -10,21 +8,18 @@
     padding: 10px;
     margin-bottom: 10px;
     background-color: rgb(236, 217, 238);
-    border-radius: 5px;
-}
+    border-radius: 5px;}
 
 
 button:hover {
     color: rgb(128, 5, 5);
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 
 .project_cards {
     align-items: flex-start;
     display: flex;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
 
 
 .medium_print_on_page {
@@ -34,13 +29,11 @@ button:hover {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    text-align: center;
-}
+    text-align: center;}
 
 
 .large_print_on_page {
-    text-align: center;
-}
+    text-align: center;}
 
 
 h1 {
@@ -48,47 +41,48 @@ h1 {
     background-color: #393637e8;
     color: #fff;
     padding: .5em;
-    text-align: center;
-}
+    text-align: center;}
+
 
 .timer {
     font-size: 1.5em;
-    text-align: center;
-}
+    text-align: center;}
+
 
 .content {
     margin: 0 auto;
-    width: 600px;
-}
+    width: 600px;}
+
 
 .quiz_area {
-    text-align: center;
-}
+    text-align: center;}
+
 
 .highScoreBox {
-    text-align: center;
-}
+    text-align: center;}
+
 
 .hidden {
-    display: none;
-}
+    display: none;}
+
 
 #scoreDisplayed {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
-    font-weight: 600;
-}
+    font-weight: 600;}
+
 
 #leaderBoard {
-    font-size: 26px;
+    font-size: 26px;}
 
-}
 
 #players {
-    font-size: 26px;
-}
+    font-size: 26px;}
+
+
 
 .inputInitials {
-    padding: 20px;
-}
+    padding: 20px;}
+
+/*KJR*/
