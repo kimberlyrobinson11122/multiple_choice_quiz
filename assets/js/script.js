@@ -162,7 +162,7 @@ function displayNextQuestion() {
         document.querySelector(".timer").classList.add("hidden");
         document.querySelector("#highScoresList").classList.remove("hidden");
         document.querySelector("#scoreDisplayed").innerHTML = `Good job! <br/>You are all finished! <br/> Your final score is ${highScore}!`;
-        //item added
+        //added
         document.querySelector("#scoreDisplayed").add("hidden")
 
         console.log(highScore);
