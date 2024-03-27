@@ -26,7 +26,6 @@
         
         <div class="quiz_area">
             <p>
-
             <h2 id="main_quiz_body" class="medium_print_on_page">
             Ready to tackle some code-related questions? 
             <p>Answer carefully, each wrong answer subtracts ten seconds to your time!</p>
@@ -50,14 +49,23 @@
 
     </main>
 
-    <div id="highScoreBox" style="display: none;">
+    <div id="highScoresList" class="content hidden">
+        <div id="scoreDisplayed"></div>
         <div id="initialsContainer">
           <label for="inputInitials">Enter your initials:</label>
           <input type="text" id="inputInitials">
           <button id="addInitials">Submit</button>
         </div>
-        <div id="scoreDisplayed"></div>
     </div>
+
+    <div id="leaderBoard" class="content hidden">
+        <div>High Scores</div>
+        <ol id="players">
+
+        </ol>
+    </div>
+
+    
 
     <script>
         document.body.style.backgroundAttachment = "fixed";

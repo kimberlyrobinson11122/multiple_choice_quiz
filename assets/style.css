@@ -6,6 +6,11 @@
 .choice-button {
     font-size: 1em;
     text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(236, 217, 238);
+    border-radius: 5px;
 }
 
 
@@ -46,12 +51,10 @@ h1 {
     text-align: center;
 }
 
-
 .timer {
     font-size: 1.5em;
     text-align: center;
 }
-
 
 .content {
     margin: 0 auto;
@@ -64,4 +67,15 @@ h1 {
 
 .highScoreBox {
     text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#scoreDisplayed {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 20px;
+    line-height: 1.25;
 }
