@@ -1,63 +1,57 @@
-# multiple_choice_quiz
+# Code Quiz (using multiple choice)
 
-# My Portfolio
+## User Story
+AS A coding boot camp student
 
-# User Story
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 
-AS AN employer
-
-I WANT to view a potential employee's deployed portfolio of work samples
-
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
+SO THAT I can gauge my progress compared to my peers
 
 
 ## Acceptance Criteria: 
-GIVEN I need to sample a potential employee's previous work:
+GIVEN I am taking a code quiz
 
-WHEN I load their portfolio
-    THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+WHEN I click the start button
+    THEN a timer starts and I am presented with a question
 
-WHEN I click one of the links in the navigation
-    THEN the UI scrolls to the corresponding section
+WHEN I answer a question
+    THEN I am presented with another question
 
-WHEN I click on the link to the section about their work
-    THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I answer a question incorrectly
+    THEN time is subtracted from the clock
 
-WHEN I am presented with the developer's first application
-    THEN that application's image should be larger in size than the others
+WHEN all questions are answered or the timer reaches 0
+    THEN the game is over
 
-WHEN I click on the images of the applications
-    THEN I am taken to that deployed application
-
-WHEN I resize the page or view the site on various screens and devices
-    THEN I am presented with a responsive layout that adapts to my viewport
+WHEN the game is over
+    THEN I can save my initials and score
 
 ## Name
-Kimberly Robinson's Portfolio 
+Code Quiz (Multiple Choice)
 
 ## Deployed Application
-[Visit my deployed portfolio](https://kimberlyrobinson11122.github.io/Kimberly-Robinson-Portfolio/)
+[Deployed Code Quiz (click here)](https://kimberlyrobinson11122.github.io/multiple_choice_quiz/)
 
 ## Description
-This deployment is to showcase the projects and work for potential employers and clients
+This deployment is to test students' knowledge of some basic coding aspects after learning the basics of HTML, CSS, and Javascript. 
 
 ## Solved
-1. We solved the responsive screen issue that was broken in the first build
+1. Resolved uestions and choices cycle appropriately, with a 10-second decrement for incorrect answers
 
-2. Fixed the project card images to fit and be same sizing
+2. View high scores link issue resolved, when clicked high scores are shown
 
-3. Commits do not align as first build was corrupted with conflicting branches, rebuilt commits only show recent work
+3. Fixed so that the Timer starts upon clicking the start button and stops after answering the last question
 
 
 ## Images
 Screenshot of the first build:
-![My Portfolio Initial Build](./assets/images/fixed%20links%20and%20spacing.png)
+![My Portfolio Initial Build](./assets/images/Code%20Quiz%20Initial%20Build%2020240327%20v1.png)
 
-Screenshot of the project cards as they should be, adjusting to sizing from center to one column when shrinking the screen:
-![Project Card Adjustment Success](./assets/images/fixed%20sizing%20issue%20with%20different%20devices.png)
+Screenshot of the view high scores:
+![Project Card Adjustment Success](./assets/images/Code%20Quiz%20Initial%20Build%20-%20View%20High%20Scores%2020240327%20v1.png)
 
 ## Credits
-This was built from scratch
+The project was started from scratch and developed iteratively
 
 
 ## Test
@@ -65,12 +59,15 @@ Consistent testing of links throughout each iteration
 
 
 ## Authors and acknowledgment
-Appreciation to the Instructor and TAs at EdX Berkeley
+Appreciation to the Instructor, TAs, Tutuors at EdX Berkeley
 
 
 ## Support
-If you need help with anything please email me at kimberly.robinson@outlook.com
+If you need help with anything please email me at kimberly.robinson1122@gmail.com.
 
 
 ## Project status
-This is an ongoing project and will be updated as new projects are completed
+This build is complete and to specification, this is in a steady state until feature requests are submitted to the above email address and will be considered with owner approval. 
+
+## Extra comments for sustainability team
+Extra images saved which weren't used but this addition is intentional, is there when/if there is a second build those will be included

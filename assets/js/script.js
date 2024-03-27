@@ -163,8 +163,6 @@ function displayNextQuestion() {
         document.querySelector("#highScoresList").classList.remove("hidden")
         document.querySelector("#scoreDisplayed").innerHTML = `Good job! <br/>You are all finished! <br/> Your final score is ${highScore}!`
 
-        document.getElementById("#scoresDisplayed").add("hidden");
-                
         console.log(highScore);
 
         updateViewHighScore();
@@ -289,7 +287,7 @@ function updateViewHighScore() {
     //clear existing list
     document.getElementById("players").innerHTML = "";
     document.getElementById("scoreDisplayed").innerHTML = "";
-
+  
     //view high score
     var savedScores = JSON.parse(localStorage.getItem("Scores")) || [];
     
@@ -305,6 +303,7 @@ function updateViewHighScore() {
 
     //Append
     document.getElementById("players").appendChild(listItem);
+
     });
 }
 
